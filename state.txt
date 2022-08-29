@@ -1,4 +1,42 @@
-state
+URLs
+
+https://joserzapata.github.io/courses/python-ciencia-datos/visualizacion/seaborn/
+
+https://seaborn.pydata.org/examples/index.html
+
+
+https://seaborn.pydata.org/tutorial.html
+
+
 
 
 data[data['eName'] == 'Pluto']
+
+
+
+sns.set_theme(style="whitegrid")
+sns.catplot(data=planets, x='semimajorAxis', y='eName', kind="bar", ci="sd", palette="hls", height=6)
+plt.xticks(rotation=90)
+plt.title('Mean orbital distance in km')
+plt.show()
+
+
+f, ax = plt.subplots(3, 2, figsize=(10, 10))
+
+plt.suptitle('D = M/V')
+
+sns.barplot(data=inner_planets, x='eName', y='density', palette="hls", ax=ax[0,0])
+sns.barplot(data=outer_planets, x='eName', y='density', palette="hls", ax=ax[0,1])
+
+sns.barplot(data=inner_planets, x='eName', y='mass_kg', palette="hls", ax=ax[1,0])
+sns.barplot(data=outer_planets, x='eName', y='mass_kg', palette="hls", ax=ax[1,1])
+
+sns.barplot(data=inner_planets, x='eName', y='volume', palette="hls", ax=ax[2,0])
+sns.barplot(data=outer_planets, x='eName', y='volume', palette="hls", ax=ax[2,1])
+
+ax[2,0].set_xlabel('Inner planets')
+ax[2,1].set_xlabel('Outer planets')
+ax[1,0].set_xlabel(None)
+ax[1,1].set_xlabel(None)
+ax[0,0].set_xlabel(None)
+ax[0,1].set_xlabel(None);

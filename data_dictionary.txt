@@ -17,7 +17,7 @@ sideralOrbit - double - orbital period in Earth days
 sideralRotation - double - rotational period in hours
 discoveryDate - date - date of discovery, this is left blank for any objects that were known since antiquity
 mass_kg - integer - total estimated mass of object in kg
-volume - integer - approximate volume in km^3
+volume - integer - approxima loote volume in km^3
 orbit_type - class - either primary; orbites the Sun, or secondary; orbits a planet
 orbits - class - the planet that the body orbits. If it does not orbit a planet then it is NA
 bondAlbedo - double - Bond albedo, portion of light/energy that get reflected by the surface
